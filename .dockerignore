@@ -1,0 +1,15 @@
+node_modules
+npm-debug.log
+Dockerfile
+.dockerignore
+.git
+.gitignore
+dist
+coverage
+.env
+**/.env
+**/dist
+**/node_modules
+**/.cache
+**/.nyc_output
+**/.DS_Store

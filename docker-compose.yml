@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+  cap-server:
+    build: .
+    container_name: cap-server
+    environment:
+      - APP_ENV=production
+      - APP_PORT=3000
+      - APP_HOST=0.0.0.0
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    ports:
+      - "3000:3000"
+    depends_on:
+      - redis
+  redis:
+    image: redis:7-alpine
+    container_name: cap-redis
+    command: ["redis-server", "--appendonly", "yes"]
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+volumes:
+  redis-data:

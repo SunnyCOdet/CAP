@@ -1,0 +1,20 @@
+{
+  "name": "@cap/adapters",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "files": ["dist"],
+  "publishConfig": { "access": "public" },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepack": "npm run build"
+  },
+  "dependencies": {
+    "ioredis": "^5.4.1",
+    "openai": "^4.58.1",
+    "@cap/core": "0.1.0"
+  }
+}
+
+

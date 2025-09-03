@@ -1,0 +1,16 @@
+{
+  "name": "@cap/server",
+  "version": "0.1.0",
+  "main": "dist/http.js",
+  "types": "dist/http.d.ts",
+  "license": "MIT",
+  "scripts": { "build": "tsc -p tsconfig.json" },
+  "dependencies": {
+    "fastify": "^4.28.1",
+    "dotenv": "^16.4.5",
+    "@cap/core": "0.1.0",
+    "@cap/adapters": "0.1.0"
+  }
+}
+
+

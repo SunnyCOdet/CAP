@@ -1,0 +1,26 @@
+{
+  "name": "cap-monorepo",
+  "private": true,
+  "workspaces": [
+    "packages/cap-core",
+    "packages/cap-adapters",
+    "packages/cap-bridge-mcp",
+    "packages/cap-server",
+    "packages/examples"
+  ],
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "ts-node": "^10.9.2",
+    "@types/node": "^20.14.10",
+    "eslint": "^9.9.0"
+  },
+  "scripts": {
+    "build": "npm run -ws build",
+    "prepack": "npm run build",
+    "start:standalone": "ts-node packages/examples/standalone.ts",
+    "start:mcp": "ts-node packages/examples/with-mcp.ts",
+    "start:server": "ts-node packages/cap-server/src/http.ts"
+  }
+}
+
+

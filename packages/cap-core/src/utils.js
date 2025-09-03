@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.sleep = exports.now = exports.uuid = void 0;
+const crypto_1 = require("crypto");
+const uuid = () => (0, crypto_1.randomUUID)();
+exports.uuid = uuid;
+const now = () => Date.now();
+exports.now = now;
+const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+exports.sleep = sleep;
