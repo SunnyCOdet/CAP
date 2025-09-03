@@ -1,4 +1,4 @@
-import { Embedder } from "@cap/core";
+import { Embedder } from "@contextawareprotocol/core";
 import OpenAI from "openai";
 
 export class OpenAIEmbedder implements Embedder {

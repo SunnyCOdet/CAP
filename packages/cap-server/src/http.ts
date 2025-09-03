@@ -1,7 +1,7 @@
 import Fastify from "fastify";
 import { config } from "./config";
-import { CAPClient } from "@cap/core";
-import { InMemoryVectorStore, MemoryCache, OpenAIAdapter, OpenAIEmbedder } from "@cap/adapters";
+import { CAPClient } from "@contextawareprotocol/core";
+import { InMemoryVectorStore, MemoryCache, OpenAIAdapter, OpenAIEmbedder } from "@contextawareprotocol/adapters";
 
 const server = Fastify({ logger: true });
 

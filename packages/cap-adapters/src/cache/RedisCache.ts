@@ -1,4 +1,4 @@
-import { CacheAdapter } from "@cap/core";
+import { CacheAdapter } from "@contextawareprotocol/core";
 import Redis from "ioredis";
 
 export class RedisCache implements CacheAdapter {

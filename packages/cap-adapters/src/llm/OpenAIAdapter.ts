@@ -1,5 +1,5 @@
 import OpenAI from "openai";
-import { LLMAdapter } from "@cap/core";
+import { LLMAdapter } from "@contextawareprotocol/core";
 
 export class OpenAIAdapter implements LLMAdapter {
   public name = "openai-chat-completions";

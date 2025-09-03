@@ -1,6 +1,6 @@
-import { CAPClient } from "@cap/core";
-import { InMemoryVectorStore, MemoryCache, OpenAIAdapter, OpenAIEmbedder } from "@cap/adapters";
-import { MCPBridge } from "@cap/bridge-mcp";
+import { CAPClient } from "@contextawareprotocol/core";
+import { InMemoryVectorStore, MemoryCache, OpenAIAdapter, OpenAIEmbedder } from "@contextawareprotocol/adapters";
+import { MCPBridge } from "@contextawareprotocol/bridge-mcp";
 
 // Hypothetical MCP host app; replace with your MCP server framework wiring.
 class FakeMCPHost {

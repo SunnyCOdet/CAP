@@ -1,16 +1,25 @@
 {
-  "name": "@cap/core",
-  "version": "0.1.0",
+  "name": "@contextawareprotocol/core",
+  "version": "0.1.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
-  "files": ["dist"],
-  "publishConfig": { "access": "public" },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "prepack": "npm run build"
   },
-  "dependencies": {}
+  "keywords": [
+    "ai",
+    "rag",
+    "context",
+    "mcp",
+    "llm",
+    "retrieval"
+  ]
 }
-
-

@@ -1,5 +1,5 @@
-import { CAPClient } from "@cap/core";
-import { InMemoryVectorStore, MemoryCache, OpenAIAdapter, OpenAIEmbedder } from "@cap/adapters";
+import { CAPClient } from "@contextawareprotocol/core";
+import { InMemoryVectorStore, MemoryCache, OpenAIAdapter, OpenAIEmbedder } from "@contextawareprotocol/adapters";
 
 (async () => {
   const cap = new CAPClient({

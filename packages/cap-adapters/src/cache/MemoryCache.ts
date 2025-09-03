@@ -1,4 +1,4 @@
-import { CacheAdapter } from "@cap/core";
+import { CacheAdapter } from "@contextawareprotocol/core";
 
 export class MemoryCache implements CacheAdapter {
   private store = new Map<string, { v: any; exp?: number }>();

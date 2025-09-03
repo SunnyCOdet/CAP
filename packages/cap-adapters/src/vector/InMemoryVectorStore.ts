@@ -1,4 +1,4 @@
-import { VectorAdapter, UUID } from "@cap/core";
+import { VectorAdapter, UUID } from "@contextawareprotocol/core";
 
 function cosine(a: number[], b: number[]) {
   let dot=0, na=0, nb=0;

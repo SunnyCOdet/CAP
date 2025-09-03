@@ -15,7 +15,7 @@
     "eslint": "^9.9.0"
   },
   "scripts": {
-    "build": "npm run -ws build",
+    "build": "npm run --workspaces build",
     "prepack": "npm run build",
     "start:standalone": "ts-node packages/examples/standalone.ts",
     "start:mcp": "ts-node packages/examples/with-mcp.ts",

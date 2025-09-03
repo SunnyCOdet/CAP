@@ -1,20 +1,30 @@
 {
-  "name": "@cap/adapters",
-  "version": "0.1.0",
+  "name": "@contextawareprotocol/adapters",
+  "version": "0.1.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
-  "files": ["dist"],
-  "publishConfig": { "access": "public" },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "prepack": "npm run build"
   },
   "dependencies": {
+    "@contextawareprotocol/core": "0.1.0",
     "ioredis": "^5.4.1",
-    "openai": "^4.58.1",
-    "@cap/core": "0.1.0"
-  }
+    "openai": "^4.58.1"
+  },
+  "keywords": [
+    "ai",
+    "rag",
+    "adapters",
+    "redis",
+    "openai",
+    "vector"
+  ]
 }
-
-

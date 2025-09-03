@@ -116,8 +116,8 @@ OPENAI_API_KEY=$OPENAI_API_KEY docker compose up --build
 
 ## Using CAP as a Library
 ```ts
-import { CAPClient } from "@cap/core";
-import { InMemoryVectorStore, MemoryCache, OpenAIAdapter, OpenAIEmbedder } from "@cap/adapters";
+import { CAPClient } from "@contextawareprotocol/core";
+import { InMemoryVectorStore, MemoryCache, OpenAIAdapter, OpenAIEmbedder } from "@contextawareprotocol/adapters";
 
 const cap = new CAPClient({
   vector: new InMemoryVectorStore(),

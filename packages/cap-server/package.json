@@ -1,16 +1,31 @@
 {
-  "name": "@cap/server",
-  "version": "0.1.0",
+  "name": "@contextawareprotocol/server",
+  "version": "0.1.1",
   "main": "dist/http.js",
   "types": "dist/http.d.ts",
   "license": "MIT",
-  "scripts": { "build": "tsc -p tsconfig.json" },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepack": "npm run build"
+  },
   "dependencies": {
-    "fastify": "^4.28.1",
+    "@contextawareprotocol/adapters": "0.1.0",
+    "@contextawareprotocol/core": "0.1.0",
     "dotenv": "^16.4.5",
-    "@cap/core": "0.1.0",
-    "@cap/adapters": "0.1.0"
-  }
+    "fastify": "^4.28.1"
+  },
+  "keywords": [
+    "fastify",
+    "server",
+    "rest",
+    "api",
+    "cap",
+    "context"
+  ]
 }
-
-

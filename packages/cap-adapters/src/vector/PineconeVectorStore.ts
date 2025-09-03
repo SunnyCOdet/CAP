@@ -1,4 +1,4 @@
-import { VectorAdapter, UUID } from "@cap/core";
+import { VectorAdapter, UUID } from "@contextawareprotocol/core";
 
 // Implement with official Pinecone client if desired.
 export class PineconeVectorStore implements VectorAdapter {

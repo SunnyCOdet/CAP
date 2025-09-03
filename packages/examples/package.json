@@ -1,14 +1,14 @@
 {
-  "name": "@cap/examples",
+  "name": "@contextawareprotocol/examples",
   "version": "0.1.0",
   "private": true,
   "main": "standalone.ts",
   "license": "MIT",
   "scripts": { "build": "echo examples" },
   "dependencies": {
-    "@cap/core": "0.1.0",
-    "@cap/adapters": "0.1.0",
-    "@cap/bridge-mcp": "0.1.0"
+    "@contextawareprotocol/core": "0.1.0",
+    "@contextawareprotocol/adapters": "0.1.0",
+    "@contextawareprotocol/bridge-mcp": "0.1.0"
   }
 }
 

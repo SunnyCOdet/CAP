@@ -1,4 +1,4 @@
-import { CAPClient } from "@cap/core";
+import { CAPClient } from "@contextawareprotocol/core";
 
 // Minimal JSON-RPC handler to act as an MCP tool.
 // Plug this into your MCP server framework's tool registration.

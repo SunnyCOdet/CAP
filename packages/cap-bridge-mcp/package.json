@@ -1,18 +1,27 @@
 {
-  "name": "@cap/bridge-mcp",
-  "version": "0.1.0",
+  "name": "@contextawareprotocol/bridge-mcp",
+  "version": "0.1.1",
   "main": "dist/MCPBridge.js",
   "types": "dist/MCPBridge.d.ts",
   "license": "MIT",
-  "files": ["dist"],
-  "publishConfig": { "access": "public" },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "prepack": "npm run build"
   },
   "dependencies": {
-    "@cap/core": "0.1.0"
-  }
+    "@contextawareprotocol/core": "0.1.0"
+  },
+  "keywords": [
+    "mcp",
+    "bridge",
+    "tools",
+    "json-rpc",
+    "agents"
+  ]
 }
-
-
