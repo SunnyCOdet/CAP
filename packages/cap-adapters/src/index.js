@@ -19,4 +19,6 @@ __exportStar(require("./cache/RedisCache"), exports);
 __exportStar(require("./vector/InMemoryVectorStore"), exports);
 __exportStar(require("./vector/PineconeVectorStore"), exports);
 __exportStar(require("./llm/OpenAIAdapter"), exports);
+__exportStar(require("./llm/LocalLLMAdapter"), exports);
 __exportStar(require("./embedding/OpenAIEmbedder"), exports);
+__exportStar(require("./embedding/LocalEmbedder"), exports);

@@ -15,7 +15,7 @@
     "prepack": "npm run build"
   },
   "dependencies": {
-    "@contextawareprotocol/core": "0.1.0"
+    "@contextawareprotocol/core": "0.1.1"
   },
   "keywords": [
     "mcp",

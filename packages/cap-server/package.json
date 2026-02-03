@@ -15,8 +15,8 @@
     "prepack": "npm run build"
   },
   "dependencies": {
-    "@contextawareprotocol/adapters": "0.1.0",
-    "@contextawareprotocol/core": "0.1.0",
+    "@contextawareprotocol/adapters": "0.1.1",
+    "@contextawareprotocol/core": "0.1.1",
     "dotenv": "^16.4.5",
     "fastify": "^4.28.1"
   },

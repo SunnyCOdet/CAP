@@ -15,7 +15,7 @@
     "prepack": "npm run build"
   },
   "dependencies": {
-    "@contextawareprotocol/core": "0.1.0",
+    "@contextawareprotocol/core": "0.1.1",
     "ioredis": "^5.4.1",
     "openai": "^4.58.1"
   },
