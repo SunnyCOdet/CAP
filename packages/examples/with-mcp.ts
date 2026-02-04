@@ -1,6 +1,7 @@
 import { CAPClient } from "@contextawareprotocol/core";
-import { InMemoryVectorStore, MemoryCache, OpenAIAdapter, OpenAIEmbedder } from "@contextawareprotocol/adapters";
+import { InMemoryVectorStore, MemoryCache } from "@contextawareprotocol/adapters";
 import { MCPBridge } from "@contextawareprotocol/bridge-mcp";
+import { createExampleAdapters } from "./localAdapters";
 
 // Hypothetical MCP host app; replace with your MCP server framework wiring.
 class FakeMCPHost {
@@ -10,11 +11,15 @@ class FakeMCPHost {
 }
 
 (async () => {
+  const { embedder, llm, usingOpenAI } = createExampleAdapters();
+  if (!usingOpenAI) {
+    console.warn("OPENAI_API_KEY not set; using local fallback adapters.");
+  }
   const cap = new CAPClient({
     vector: new InMemoryVectorStore(),
     cache: new MemoryCache(),
-    embedder: new OpenAIEmbedder(), // set OPENAI_API_KEY
-    llm: new OpenAIAdapter()
+    embedder,
+    llm
   });
 
   const bridge = new MCPBridge(cap);
@@ -31,5 +36,4 @@ class FakeMCPHost {
   const out = await mcp.call("cap.orchestrate", { session_id: s.session_id, query: "contrast mcp and cap" });
   console.log(out.answer);
 })();
-
 

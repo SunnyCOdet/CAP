@@ -1,12 +1,17 @@
 import { CAPClient } from "@contextawareprotocol/core";
-import { InMemoryVectorStore, MemoryCache, OpenAIAdapter, OpenAIEmbedder } from "@contextawareprotocol/adapters";
+import { InMemoryVectorStore, MemoryCache } from "@contextawareprotocol/adapters";
+import { createExampleAdapters } from "./localAdapters";
 
 (async () => {
+  const { embedder, llm, usingOpenAI } = createExampleAdapters();
+  if (!usingOpenAI) {
+    console.warn("OPENAI_API_KEY not set; using local fallback adapters.");
+  }
   const cap = new CAPClient({
     vector: new InMemoryVectorStore(),
     cache: new MemoryCache(),
-    embedder: new OpenAIEmbedder(),  // set OPENAI_API_KEY
-    llm: new OpenAIAdapter()
+    embedder,
+    llm
   });
 
   const s = cap.createSession("sunny");
@@ -16,5 +21,4 @@ import { InMemoryVectorStore, MemoryCache, OpenAIAdapter, OpenAIEmbedder } from 
   const res = await cap.orchestrate(s.id, "Explain MCP vs CAP in one paragraph.");
   console.log(res.answer);
 })();
-
 
