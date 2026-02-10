@@ -1,15 +1,23 @@
 import Fastify from "fastify";
 import { config } from "./config";
 import { CAPClient } from "@contextawareprotocol/core";
-import { InMemoryVectorStore, MemoryCache, OpenAIAdapter, OpenAIEmbedder } from "@contextawareprotocol/adapters";
+import {
+  InMemoryVectorStore,
+  MemoryCache,
+  OpenAIAdapter,
+  OpenAIEmbedder,
+  LocalEmbedder,
+  LocalLLMAdapter
+} from "@contextawareprotocol/adapters";
 
 const server = Fastify({ logger: true });
 
+const useOpenAI = Boolean(process.env.OPENAI_API_KEY);
 const cap = new CAPClient({
   vector: new InMemoryVectorStore(),
   cache: new MemoryCache(),
-  embedder: new OpenAIEmbedder(),         // requires OPENAI_API_KEY
-  llm: new OpenAIAdapter()                // requires OPENAI_API_KEY
+  embedder: useOpenAI ? new OpenAIEmbedder() : new LocalEmbedder(),
+  llm: useOpenAI ? new OpenAIAdapter() : new LocalLLMAdapter()
 });
 
 // Standalone CAP endpoints (no MCP required)
@@ -40,5 +48,4 @@ server.post("/cap/orchestrate", async (req, reply) => {
 server.listen({ port: config.app.port, host: process.env.APP_HOST || "0.0.0.0" })
   .then(addr => server.log.info(`CAP server listening on ${addr}`))
   .catch(err => { server.log.error(err); process.exit(1); });
-
 

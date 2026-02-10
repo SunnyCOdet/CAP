@@ -41,6 +41,7 @@ $env:OPENAI_API_KEY = "<your_key>"
 ```bash
 export OPENAI_API_KEY="<your_key>"
 ```
+If you skip the API key, the server and examples fall back to local hash embeddings and a simple echo LLM so you can still run the workflow end-to-end.
 
 ### Run the standalone example
 ```bash
@@ -165,5 +166,4 @@ See `packages/cap-bridge-mcp` and `packages/examples/with-mcp.ts` for a minimal 
 
 ## License
 MIT
-
 

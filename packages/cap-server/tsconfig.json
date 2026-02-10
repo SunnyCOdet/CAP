@@ -2,9 +2,12 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "rootDir": "src",
-    "outDir": "dist"
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "@contextawareprotocol/adapters": ["../cap-adapters/dist"],
+      "@contextawareprotocol/core": ["../cap-core/dist"]
+    }
   },
   "include": ["src/**/*"]
 }
-
-
